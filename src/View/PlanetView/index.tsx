@@ -72,8 +72,15 @@ const PlanetView: React.FC<PlanetViewProps> = ({ scrollY }) => {
           transition={{ ease: 'linear' }}
         />
       </div>
+
+     
+      <h1 className="header-2 text-color-white">
+        <p>Where NFT communities</p>
+        <p>come to vibe</p>
+      </h1>
     </>
   );
 };
 
 export default PlanetView;
+
