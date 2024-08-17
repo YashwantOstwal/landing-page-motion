@@ -1,28 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import './Styles/LandingPage.css';
-import redRockImage from './assests/redrock.png'; 
-import greyPlanetImage from './assests/greyplanet.png'; 
-import redPlanetImage from './assests/red.png'; 
-import bluePlanetImage from './assests/blueplanet.png'; 
-import orangePlanetImage from './assests/orange.png'; 
-import pinkPlanetImage from './assests/pinkplanet.png';
+import redRockImage from '../../assests/redrock.png'; 
+import greyPlanetImage from '../../assests/greyplanet.png'; 
+import redPlanetImage from '../../assests/red.png'; 
+import bluePlanetImage from '../../assests/blueplanet.png'; 
+import orangePlanetImage from '../../assests/orange.png'; 
+import pinkPlanetImage from '../../assests/pinkplanet.png';
 
-const LandingPage: React.FC = () => {
-  const [scrollY, setScrollY] = useState(0);
+interface PlanetViewProps {
+  scrollY: number;
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+const PlanetView: React.FC<PlanetViewProps> = ({ scrollY }) => {
   const rotation = Math.min(scrollY * 0.1, 10);
   const redRockRotation = -scrollY * 0.1;
   const bluePlanetMove = scrollY * 0.2;
@@ -31,7 +20,7 @@ const LandingPage: React.FC = () => {
   const pinkPlanetRotation = -rotation;
 
   return (
-    <div className="landing-page">
+    <>
       <motion.img
         src={bluePlanetImage}
         alt="Blue Planet"
@@ -43,9 +32,7 @@ const LandingPage: React.FC = () => {
         src={orangePlanetImage}
         alt="Orange Planet"
         className="fixed-orange-planet"
-        style={{
-          rotate: scrollY * 0.05,
-        }}
+        style={{ rotate: scrollY * 0.05 }}
         transition={{ ease: 'linear' }} 
       />
 
@@ -85,12 +72,8 @@ const LandingPage: React.FC = () => {
           transition={{ ease: 'linear' }}
         />
       </div>
-
-      <h1 className="header-2 text-color-white"><p>Where NFT communities</p><p>come to vibe</p></h1>
-    </div>
+    </>
   );
 };
 
-export default LandingPage;
-
-
+export default PlanetView;

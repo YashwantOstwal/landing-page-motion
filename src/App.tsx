@@ -1,7 +1,9 @@
 // src/App.tsx
 import React from 'react';
-import LandingPage from './LandingPage';
+
 import NavBar from './component/shared/Header';
+import LandingPage from './Page/LandingPage';
+
 
 
 
