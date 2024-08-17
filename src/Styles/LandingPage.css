@@ -1,0 +1,101 @@
+.landing-page {
+  margin-top: -50px;
+  width: 100vw;
+  height: 200vh;
+  background: 
+  
+  url('../assests/stars.png') no-repeat , 
+ #2b0333;
+background-size: cover;
+background-blend-mode: overlay;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.left-side-images {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-image {
+  height: auto;
+}
+
+.redrock {
+  width: 250px;
+  margin-left: -50px;
+  margin-top: -10px;
+  transform-origin: center;
+}
+
+.grey-planet {
+  width: 410px;
+  height: 400px;
+  margin-left: -100px;
+  margin-top: -130px;
+  transform-origin: center;
+}
+
+.red-planet {
+  width: 300px;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  margin-top: -270px;
+  transform-origin: center;
+}
+
+.title {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  top: 20vh;
+}
+
+.fixed-blue-planet {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 180px;
+  height: auto;
+  z-index: 4;
+  margin-right: 70px;
+  transform-origin: center;
+}
+
+.fixed-orange-planet {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  margin-right: -50px;
+  width: 350px;
+  height: auto;
+  z-index: 3;
+  transform-origin: center;
+}
+
+.fixed-pink-planet {
+  position: absolute;
+  top: 350px;
+  right: 100px;
+  width: 459px;
+  height: auto;
+  z-index: 4;
+  transform-origin: center;
+  transform: rotate(-30deg);
+}
+.header-2 {
+    margin-bottom: 980px;
+    font-size: 3.125rem;
+    line-height: 1.1;
+    color: antiquewhite;
+}

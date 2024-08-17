@@ -1,0 +1,26 @@
+/* src/NavBar.css */
+.navbar {
+    background-color: black;
+    padding: 1rem;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .navbar-item:hover {
+    text-decoration: underline;
+  }
+  
